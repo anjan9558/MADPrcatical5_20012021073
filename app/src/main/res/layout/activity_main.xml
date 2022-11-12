@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraint">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:id="@+id/top_tool"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_menu_24"
+                android:id="@+id/menu"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="MP3 Player"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card1"
+            style="@style/Widget.Material3.MaterialTimePicker.ImageButton"
+            app:cardCornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_tool"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/musicpic"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card2"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/card1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dosti Music Video"
+                    android:textSize="30sp"
+                    android:layout_marginStart="20dp"/>
+                <com.google.android.material.slider.RangeSlider
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp" />
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/shuffle"
+                        android:layout_width="wrap_content"
+                        app:fabSize="mini"
+
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_shuffle_24"
+                        />
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/pvr"
+                        android:layout_width="wrap_content"
+                        app:fabSize="mini"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_skip_previous_24"
+                        android:layout_marginStart="20dp"
+                        />
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/start"
+                        android:layout_width="wrap_content"
+                        app:fabSize="normal"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_play_circle_outline_24"
+                        android:layout_marginStart="20dp"
+                        />
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/next"
+                        android:layout_width="wrap_content"
+                        app:fabSize="mini"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_skip_next_24"
+                        android:layout_marginStart="20dp"
+                        />
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/stop"
+                        android:layout_width="wrap_content"
+                        app:fabSize="mini"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_stop_circle_24"
+                        android:layout_marginStart="20dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
